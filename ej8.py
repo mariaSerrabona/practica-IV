@@ -4,7 +4,7 @@ import os
 import random
 import re
 import sys
- #
+#
 # Complete the 'countApplesAndOranges' function below.
 #
 # The function accepts following parameters:
@@ -26,7 +26,7 @@ def countApplesAndOranges(s, t, a, b, apples, oranges):
     #ahora con otra lista, guardamos las manzanas que están dentro del intervalo de la casa
     houseApples=[]
     for apple in fallenApples:
-        if apple<15 and apple>5:
+        if apple<t and apple>s:
             houseApples.append(apple)
 
     #por último imprimimos por pantalla el tamaño de la lista de las manzanas que caen en la casa
@@ -42,7 +42,7 @@ def countApplesAndOranges(s, t, a, b, apples, oranges):
 
     houseOranges=[]
     for orange in fallenOranges:
-        if (orange<30 and orange>15):
+        if (orange<t and orange>s):
             houseOranges.append(orange)
 
     total_oranges=len(houseOranges)

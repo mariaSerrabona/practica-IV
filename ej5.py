@@ -11,27 +11,13 @@ import sys
 # The function accepts INTEGER n as parameter.
 #
 def gameOfStones(n):
-    if n==1:
-        #ningún jugador puede realizar ningun movimiento:
-        print('ningún jugador ha ganado')
-    elif n==2:
-        #p1 tira las dos piedras
-        print('ganador: P1')
-    elif n==3:
-        #p1 tira las dos piedras y deja uno en el tablero, ganando el juego
-        print('ganador: P1')
-    elif n==4:
-        #p1 tira las tres piedras y deja uno en el tablero, ganando el juego
-        print('ganador: P1')
-    elif n==5:
-        #p1 tira todas las piedras del tablero
-        print('ganador: P1')
-    elif n==6:
-        #p1 tira todas las piedras del tablero menos ujna, ganando así la partida
-        print('ganador: P1')
-    elif n==7:
-        # en cualquiera de las tres posibilidades, el jugadoe que gana es el dos
-        print('ganador: P2')
+    if n!=7:
+        #en todos los casos en los que las piedras no son 7, simepre gana el primer jugador
+        return print('ganador: P1')
+
+    else:
+        # en cualquiera de las tres posibilidades, el jugador que gana es el dos
+        return print('ganador: P2')
 
 
 if __name__ == '__main__':
@@ -39,6 +25,6 @@ if __name__ == '__main__':
     t = int(input().strip())
     for t_itr in range(t):
         n = int(input().strip())
-result = gameOfStones(n)
+    result = gameOfStones(n)
     fptr.write(result + '\n')
-fptr.close()
+    fptr.close()
